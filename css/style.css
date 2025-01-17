@@ -13,15 +13,15 @@
   --roboto: "Roboto", serif;
 }
 
-a{
+a {
   font-weight: 800;
 }
 
-p{
-font-weight: 500;
+p {
+  font-weight: 500;
 }
 
-h1{
+h1 {
   font-weight: 700;
 }
 
@@ -76,7 +76,7 @@ header #navlinks {
   color: white;
 }
 
-#logo-container h1{
+#logo-container h1 {
   font-weight: 900;
   font-size: 23px;
 }
@@ -120,7 +120,8 @@ header #navlinks {
 #hero-section {
   max-height: 100%;
   position: relative;
-  background-color: whitesmoke;
+  background-color: red;
+  overflow: hidden;
 }
 
 #hero-section #hero-contents {
@@ -191,14 +192,13 @@ header #navlinks {
 #hero-section figure img {
   height: 32rem;
   max-width: 100%;
-  object-fit: cover;/
+  object-fit: cover;
 }
 
 #hero-section figure {
   position: absolute;
   top: 0;
   right: 100px;
-  max-width: 100%;
 }
 
 /*brands-section*/
@@ -533,175 +533,173 @@ footer h3 {
   color: dodgerblue;
 }
 
-
 /*Resposnisve Design*/
 
-@media screen and (max-width:576px) {
-  
-  header{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  height: 100px;
+@media screen and (max-width: 576px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    height: 100px;
   }
 
-#hamburger{
-display: block;
-position: absolute;
-top: 25px;
-z-index: 1;
+  #hamburger {
+    display: block;
+    position: absolute;
+    top: 25px;
+    z-index: 1;
+  }
+
+  #main-tools {
+    position: absolute;
+    top: 35px;
+    font-size: 18px;
+  }
+
+  #logo-container {
+    position: absolute;
+    left: 35%;
+    top: 65px;
+  }
+
+  header #navlinks {
+    flex-direction: column;
+    height: 100vh;
+    width: 160px;
+    background-color: #222;
+    position: fixed;
+    left: -250px;
+    top: 0;
+    padding: 80px 30px;
+    row-gap: 30px;
+    z-index: -1;
+    transition: all 0.5s ease-out;
+  }
+
+  #search-bar {
+    display: none;
+  }
+
+  #hero-section #hero-contents {
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 13px;
+  }
+
+  #hero-section figure {
+    position: absolute;
+    top: 148px;
+    left: 0;
+  }
+
+  #hero-section #hero-contents p {
+    max-width: 90%;
+  }
+
+  #hero-section {
+    min-height: 100vh;
+    background-color: whitesmoke;
+  }
+
+  #hero-section #hero-contents h1 {
+    max-width: 30%;
+    font-size: 40px;
+    position: absolute;
+    top: 270px;
+    right: 80px;
+    z-index: 1;
+    color: #444;
+  }
+
+  #brands-section {
+    background-position: left;
+  }
+
+  #brands-section #brands-content h1 {
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  #brands-content p {
+    max-width: 60%;
+    line-height: 1.6;
+  }
+
+  #fashion-section #fashion-content h1 {
+    font-size: 20px;
+    max-width: 100%;
+    line-height: 1.5;
+    font-weight: 900;
+  }
+
+  #fashion-section #fashion-content p {
+    font-size: 13px;
+    max-width: 70%;
+    text-align: center;
+  }
+  #fashion-section #fashion-container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px;
+  }
+
+  #topwear-content {
+    line-height: 1.5;
+  }
+
+  #topwear-content button {
+    padding: 10px;
+  }
+
+  #topwear-section #topwear-content h1 {
+    font-weight: 900;
+    font-size: 30px;
+  }
+
+  #bottomwear-section #bottomwear-content h1 {
+    font-weight: 900;
+    font-size: 30px;
+  }
+
+  #bottomwear-content {
+    line-height: 1.5;
+  }
+
+  #bottomwear-content button {
+    padding: 10px;
+  }
+
+  #footwear-contents h1 {
+    font-weight: 900;
+    font-size: 30px;
+  }
+
+  #footwear-contents {
+    line-height: 1.6;
+  }
+
+  #footwear-contents button {
+    padding: 10px;
+  }
+
+  #navlinks.active-sidebar {
+    left: 0;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+  }
+
+  footer #copyright {
+    font-size: 12px;
+  }
+
+  #article-container p {
+    font-size: 10px;
+  }
+  #article-container h2 {
+    font-size: 18px;
+  }
 }
-
-#main-tools{
-position: absolute;
-top: 35px;
-font-size: 18px;
-}
-
-#logo-container{
-position: absolute;
-left: 35%;
-top: 65px;
-}
-
-header #navlinks{
-flex-direction: column;
-height: 100vh;
-width: 160px;
-background-color: #222;
-position: fixed;
-left: -250px;
-top: 0;
-padding: 80px 30px;
-row-gap: 30px;
-z-index: -1;
-transition: all 0.50s ease-out;
-}
-
-
-#search-bar{
-display: none;
-}
- 
-#hero-section #hero-contents{
-display: flex;
-flex-direction: column-reverse;
-font-size: 13px;
-}
-
-#hero-section figure{
-position: absolute;
-top: 148px;
-left: 0;
-}
-
-#hero-section #hero-contents p{
-max-width: 90%;
-}
-
-
-  
-#hero-section{
-height: 103vh;
-background-color: whitesmoke;
-}
-
-#hero-section #hero-contents h1{
-
-  max-width: 30%;
-  font-size: 40px;
-  position: absolute;
-  top: 270px;
-  right: 80px; 
-  z-index: 1;
-  color: #444;
-}
-
-
-
-#brands-section{
-
-  background-position: left;
-}
-
-
-#fashion-section #fashion-content h1{
-  font-size: 30px;
-  max-width: 100%;
-  line-height: 1.5;
-  font-weight: 900;
-}
-
-#fashion-section #fashion-container{
-  grid-template-columns: repeat(1,1fr);
-  row-gap: 50px;
-}
-
-#topwear-content{
-  line-height: 1.5;
-}
-
-#topwear-content button{
-  padding: 10px;
-}
-
-
-#topwear-section #topwear-content h1{
-  font-weight: 900;
-  font-size: 30px;
-}
-
-
-
-#bottomwear-section #bottomwear-content h1{
-  font-weight: 900;
-  font-size: 30px;
-}
-
-#bottomwear-content{
-  line-height: 1.5;
-}
-
-#bottomwear-content button{
-  padding: 10px;
-}
-
-#footwear-contents h1{
-  font-weight: 900;
-  font-size: 30px;
-}
-
-#footwear-contents{
-  line-height: 1.6;
-}
-
-#footwear-contents button{
-  padding: 10px;
-}
-
-
-#navlinks.active-sidebar{
-
-  left: 0;
-
-}
-
-
-
-
-
-footer{
-
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  row-gap: 30px;
-}
-
-
-}
-
-
-
-
-
