@@ -13,6 +13,14 @@
   --roboto: "Roboto", serif;
 }
 
+body {
+  font-family: var(--opensan);
+}
+
+button {
+  font-weight: 500;
+}
+
 a {
   font-weight: 800;
 }
@@ -22,15 +30,8 @@ p {
 }
 
 h1 {
-  font-weight: 700;
-}
-
-body {
-  font-family: var(--opensan);
-}
-
-button {
-  font-weight: 500;
+  font-weight: 900;
+  text-shadow: 1px 2px 1px rgb(119, 119, 119);
 }
 
 #hamburger {
@@ -55,8 +56,8 @@ header {
   align-items: center;
   width: 100%;
   padding: 15px 5%;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   position: sticky; /*main parrent*/
   top: 0;
   z-index: 10;
@@ -73,7 +74,7 @@ header #navlinks {
 
 #navlinks li a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 #logo-container h1 {
@@ -190,8 +191,8 @@ header #navlinks {
 /*hero section images*/
 
 #hero-section figure img {
-  height: 32rem;
-  max-width: 100%;
+  height: auto;
+  max-width: 25rem;
   object-fit: cover;
 }
 
@@ -540,166 +541,111 @@ footer h3 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    position: relative;
-    height: 100px;
+    position: sticky;
+    top: 0;
+    row-gap: 20px;
+    height: 80px;
+    background-color: black;
+    color: white;
+  }
+
+  #navlinks li a {
+    color: white;
   }
 
   #hamburger {
     display: block;
     position: absolute;
-    top: 25px;
-    z-index: 1;
-  }
-
-  #main-tools {
-    position: absolute;
-    top: 35px;
-    font-size: 18px;
+    top: 30px;
+    z-index: 1000;
+    cursor: pointer;
   }
 
   #logo-container {
     position: absolute;
-    left: 35%;
-    top: 65px;
+    right: 180px;
+    top: 26px;
+  }
+  #logo-container h1 {
+    font-size: 20px;
   }
 
-  header #navlinks {
-    flex-direction: column;
-    height: 100vh;
-    width: 160px;
-    background-color: #222;
-    position: fixed;
-    left: -250px;
-    top: 0;
-    padding: 80px 30px;
-    row-gap: 30px;
-    z-index: -1;
-    transition: all 0.5s ease-out;
+  #main-tools {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    font-size: 16px;
   }
 
   #search-bar {
     display: none;
   }
 
-  #hero-section #hero-contents {
+  #navlinks {
     display: flex;
-    flex-direction: column-reverse;
-    font-size: 13px;
-  }
-
-  #hero-section figure {
-    position: absolute;
-    top: 148px;
-    left: 0;
-  }
-
-  #hero-section #hero-contents p {
-    max-width: 90%;
-  }
-
-  #hero-section {
-    min-height: 100vh;
-    background-color: whitesmoke;
-  }
-
-  #hero-section #hero-contents h1 {
-    max-width: 30%;
-    font-size: 40px;
-    position: absolute;
-    top: 270px;
-    right: 80px;
-    z-index: 1;
-    color: #444;
-  }
-
-  #brands-section {
-    background-position: left;
-  }
-
-  #brands-section #brands-content h1 {
-    font-size: 20px;
-    font-weight: 900;
-  }
-
-  #brands-content p {
-    max-width: 60%;
-    line-height: 1.6;
-  }
-
-  #fashion-section #fashion-content h1 {
-    font-size: 20px;
-    max-width: 100%;
-    line-height: 1.5;
-    font-weight: 900;
-  }
-
-  #fashion-section #fashion-content p {
-    font-size: 13px;
-    max-width: 70%;
-    text-align: center;
-  }
-  #fashion-section #fashion-container {
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 50px;
-  }
-
-  #topwear-content {
-    line-height: 1.5;
-  }
-
-  #topwear-content button {
-    padding: 10px;
-  }
-
-  #topwear-section #topwear-content h1 {
-    font-weight: 900;
-    font-size: 30px;
-  }
-
-  #bottomwear-section #bottomwear-content h1 {
-    font-weight: 900;
-    font-size: 30px;
-  }
-
-  #bottomwear-content {
-    line-height: 1.5;
-  }
-
-  #bottomwear-content button {
-    padding: 10px;
-  }
-
-  #footwear-contents h1 {
-    font-weight: 900;
-    font-size: 30px;
-  }
-
-  #footwear-contents {
-    line-height: 1.6;
-  }
-
-  #footwear-contents button {
-    padding: 10px;
+    flex-direction: column;
+    row-gap: 60px;
+    align-items: flex-start;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 180px;
+    padding: 100px 20px;
+    height: 100vh;
+    font-size: 15px;
+    z-index: -1;
   }
 
   #navlinks.active-sidebar {
     left: 0;
+    transition: left 0.5s ease-in-out;
+  }
+
+  #hero-section #hero-contents {
+    flex-direction: column;
+    padding-top: 100px;
+  }
+
+
+  #article-container {
+    position: absolute;
+    top: 0px;
+  }
+
+  #hero-section figure {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+  }
+
+  #hero-section figure img {
+    width: 18rem;
+  }
+
+  #fashion-section #fashion-container img {
+    height: 400px;
+    max-width: 300px;
+    object-fit: cover;
+  }
+
+  #fashion-section #fashion-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+  }
+
+  #fashion-content h1 {
+    font-size: 25px;
+  }
+
+  #fashion-content p {
+    font-size: 14px;
   }
 
   footer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 30px;
-  }
-
-  footer #copyright {
-    font-size: 12px;
-  }
-
-  #article-container p {
-    font-size: 10px;
-  }
-  #article-container h2 {
-    font-size: 18px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
   }
 }
