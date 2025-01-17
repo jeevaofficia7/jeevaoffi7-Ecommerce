@@ -12,11 +12,6 @@ body {
   scroll-behavior: smooth;
 }
 
-
-
-
-
-
 button {
   font-weight: 500;
 }
@@ -106,7 +101,7 @@ header #navlinks {
 #hero-section {
   max-height: 100%;
   position: relative;
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 #hero-section #hero-contents {
@@ -175,10 +170,9 @@ header #navlinks {
 /*hero section images*/
 
 #hero-section figure img {
-  height: 29.5rem;
+  height: 29.6rem;
   width: 100%;
-  object-fit: contain;
-  transition: all 1s ease;
+  object-fit: cover;
 }
 
 #hero-section figure {
@@ -194,7 +188,7 @@ header #navlinks {
   align-items: center;
   margin: 100px 0;
   row-gap: 30px;
-  background: url(/retro-man-dressed-shirt-lies-floor-posing.png)
+  background: url(/images/retro-man-dressed-shirt-lies-floor-posing.png)
     center/cover;
   background-color: orange;
   background-attachment: fixed;
@@ -537,6 +531,7 @@ footer h3 {
   #main-tools {
     position: absolute;
     top: 20px;
+    right: 50px;
   }
 
   #logo-container {
@@ -619,11 +614,11 @@ footer h3 {
 
   #hero-section {
     width: 100%;
-    background-color: whitesmoke;
+    background-color: orange;
   }
 
   #hero-section figure img {
-    height: 36.3rem;
+    height: 34.8rem;
     width: 350px;
     object-fit: contain;
   }
@@ -829,5 +824,18 @@ footer h3 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #hero-section figure img {
+    height: 36.65rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  #hero-section figure {
+    position: absolute;
+    left: 80px;
   }
 }
